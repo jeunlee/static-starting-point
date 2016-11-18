@@ -4,6 +4,30 @@
 
 {% block content %}
 <div id="app" class="clearfix">
-    <h1>Hello, this is your app.</h1>
+    <select name="hotels">
+
+      {% for hotel in hotels %}
+        <option>{{ hotel.name }}</option>
+      {% endfor %}
+
+    </select>
+
+    <select name = "restaurants">
+
+       {% for restaurant in restaurants %}
+        <option>{{ restaurant.name }}</option>
+      {% endfor %}
+
+    </select>
+
+    <select name = "activities">
+
+       {% for activitie in activities %}
+        <option>{{ activitie.name }}</option>
+      {% endfor %}
+
+    </select>
+
+
 </div>
 {% endblock %}
