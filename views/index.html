@@ -4,6 +4,15 @@
 
 {% block content %}
 <div id="app" class="clearfix">
+
+<div class = "row">
+  <div id = "map" class = ".col-md-12">
+    <p>sadad</p>
+  </div>
+<div class = "row">
+
+<div class = "row">
+  <div id = "dropdown-container" class = ".col-md-6">
     <select name="hotels">
 
       {% for hotel in hotels %}
@@ -27,7 +36,17 @@
       {% endfor %}
 
     </select>
-
-
 </div>
+
+<div class = "row">
+    <div id = "infoContainer" class = ".col-md-6">
+    <img src="http://sallysbakingaddiction.com/wp-content/uploads/2013/03/Easy-Homemade-Funfetti-Cake.-Get-the-recipe-at-sallysbakingaddiction.com-2.jpg" alt="Smiley face">
+    </div>
+  </div>
+</div>
+<script>
+  var hotels = {{ hotels | dump | safe }};
+  var restaurants = {{ restaurants | dump | safe }};
+  var activities = {{ activities | dump | safe }};
+</script>
 {% endblock %}
