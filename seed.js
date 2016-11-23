@@ -69,7 +69,7 @@ models.db.sync({force: true}) //updates structure of database in development. Us
     .then(function () {
         console.log("Dropped old data, now inserting data");
         const creatingHotels = data.hotel.map(function (hotel) {
-            return Hotel.create(hotel, { include: [Place] }) //the Place model, replaces association method, joining a place table with a hotel table});
+            return Hotel.create(hotel, { include: [Place] }) //the Place model, replaces association method, joining a place table with a hotel table, doing a "left join"});
         });
         const creatingRestaurants = data.restaurant.map(function (restaurant) {
             return Restaurant.create(restaurant, { include: [Place] });
@@ -85,3 +85,4 @@ models.db.sync({force: true}) //updates structure of database in development. Us
     .catch(function (err) {
         console.error('There was totally a problem', err, err.stack);
     });
+    //.finally() -> creates but does not RETURN a promise, has seed file process turned off 

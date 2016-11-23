@@ -5,7 +5,9 @@ const PlaceModel = require('./place');
 const ActivityModel = require('./activity');
 const RestaurantModel = require('./restaurant');
 
-HotelModel.belongsTo(PlaceModel);
+HotelModel.belongsTo(PlaceModel); 
+//PlaceModel.hasOne(HotelModel) // put a place id for each hotel
+//hotel, getPlace(), setPlace(), createPlace()
 RestaurantModel.belongsTo(PlaceModel);
 ActivityModel.belongsTo(PlaceModel);
 
