@@ -1,13 +1,16 @@
 // This file should contain all the record creation needed to seed the database with its default values.
 // The data can then be loaded with the node seed.js
+//seed files are very helpful during development
 
 var Promise = require('bluebird');
 var models = require('./models/');
-var Place = require('./models/place');
-var Hotel = require('./models/hotel');
-var Restaurant = require('./models/restaurant');
-var Activity = require('./models/activity');
+var Place = db.Place;
+var Hotel = db.Hotel;
+var Restaurant = db.Restaurant;
+var Activity = db.Activity;
+//database connection,models
 
+//data coming in
 var data = {
     hotel: [
         {name: "Andaz Wall Street", place: {address: "75 Wall St", city: "New York", state: "NY", phone: "123-456-7890", location: [40.705137, -74.007624]}, num_stars: 4, amenities: "Pool, Free Wi-Fi" },
@@ -62,11 +65,11 @@ var data = {
     ]
 };
 
-models.db.sync({force: true})
+models.db.sync({force: true}) //updates structure of database in development. Use a seed file, not a force true in the app istelf
     .then(function () {
         console.log("Dropped old data, now inserting data");
         const creatingHotels = data.hotel.map(function (hotel) {
-            return Hotel.create(hotel, { include: [Place] });
+            return Hotel.create(hotel, { include: [Place] }) //the Place model, replaces association method, joining a place table with a hotel table});
         });
         const creatingRestaurants = data.restaurant.map(function (restaurant) {
             return Restaurant.create(restaurant, { include: [Place] });

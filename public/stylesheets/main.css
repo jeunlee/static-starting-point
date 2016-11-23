@@ -1,7 +1,7 @@
-#map {
+#map-canvas {
   width: 100%;
-  height: 300px;
-  background-color: gray; }
+  height: 400px;
+  }
 
 img {
   height: 50px; }
@@ -13,3 +13,41 @@ img {
   display: inline-block; }
   .col-md-6 select {
     float: left; }
+
+.container {
+	padding: 0;
+	width: 100%;
+}
+
+.navbar-xs { 
+	width: 100%; 
+} 
+
+
+.navbar {
+	width: 100%;
+	margin-bottom: 0;
+}
+
+.nav_span {
+	margin-left: 5px;
+}
+.navbar-xs .navbar-brand{ 
+	padding: 16px 10px 8px;
+	font-size: 30px;
+	line-height: 14px; 
+} 
+
+.navbar-xs .navbar-nav > li > a { 
+	border-right:1px 
+	solid #ddd; 
+	padding-top: 2px; 
+	padding-bottom: 2px; 
+	}
+	
+@media (min-width: 768px) {
+.navbar-nav {
+	float: right;
+	margin-top:10px;
+		}
+}

@@ -3,19 +3,14 @@
   height: 300px;
   background-color: gray; }
 
-img {
-   height: 50px;
-}
-
 .row {
   display: block;
 }
 
 .col-md-6 {
-  display: inline-block;
-  // width: 50%;
+  display: block;
   select {
-    float: left;
+    float: right;
   }
 }
 

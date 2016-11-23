@@ -3,14 +3,42 @@
 <title>Trip Planner - {% block title %}{% endblock %}</title>
 <head>
   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="/stylesheets/main.css" rel= "stylesheet" type="text/css">
 </head>
 <body>
+<div class="container">
+    <nav class="navbar navbar-default navbar-xs" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><b>Trip</b> Planner</a>
+  </div>
 
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li><a href="#"><i class="glyphicon glyphicon-home"></i><span class = "nav_span">Home</span></a></li>
+      <li><a href="#"><i class="glyphicon glyphicon-zoom-in"></i><span class = "nav_span">About</span></a></li>
+      <li><a href="#"><i class="glyphicon glyphicon-user"></i><span class = "nav_span">Contact</span></a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+</div>
 {% block content %}
 {% endblock %}
 
 <!-- Script tags go here! -->
-<script></script>
+
+<script src="/jquery/jquery.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAdVHPAH9Z1lo7w5jjFoP-fwGm9P_JyDZo&sensor=true"></script>
+<script src="/js/maps.js"></script>
+
 </body>
 </html>
