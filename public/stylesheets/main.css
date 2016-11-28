@@ -3,12 +3,16 @@
   height: 400px;
   }
 
+#app {
+  background:#f0f5f5;
+}
 img {
   height: 218px;
   display: inline;}
 
 .row {
-  display: block; }
+  display: block; 
+  text-align: center;}
 
 .col-md-6 {
   display: inline-block;
@@ -18,7 +22,35 @@ img {
 
 .container {
 	padding: 0;
-	width: 100%;
+	width: 90%;
+}
+
+#selection {
+  width: 50vh;
+}
+
+#preview {
+  float:right;
+  margin-right:10px;
+  text-align:left;
+}
+
+figcaption {
+  float:right;
+  padding:5px;
+  width:60%;
+}
+
+img {
+  float:left;
+}
+#infocontainer {
+  display: inline-block;
+}
+
+#previewtext {
+  width: 50%;
+  float:right;
 }
 
 select {
@@ -95,16 +127,5 @@ select {
   /*width: 75%;*/
 }
 
-#preview{
-  height: 100%;
-  /*width: 24%;*/
-  vertical-align: text-top;
-}
 
-#previewtext{
-  display: inline;
-}
 
-#app {
-  background: #8bd5f3;
-}

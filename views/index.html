@@ -6,15 +6,14 @@
 <div id="app" class="clearfix">
 
   <div class = "row">
-   <div class="map-container col-sm-12">
+   <div class="map-container col-sm-12 col-sm-6 col-md-6">
     <div>
       <div id="map-canvas"></div>
     </div>
   </div>
 </div>
 <div class = 'row'>
-<div id = 'selection' class="panel panel-default col-sm-12 col-lg-8">
-  <div class="panel-body">
+<div id = 'selection' class="col-lg-6 col-sm-6 col-md-6">
     <div id = "dropdown-container">
     <h4>Hotels</h4>
       <select name="hotels">
@@ -36,20 +35,17 @@
           <option>{{ activitie.name }}</option>
         {% endfor %}
       </select><button class = btn-circle>+</button>
-    </div>
   </div>
 </div>
 
-<div id = "preview" class="panel panel-default col-sm-12 col-lg-4">
-  <div class="panel-body">
+<div id = "preview" class="col-lg-6">
     <div id = "infoContainer">
-      <div id = 'preview image'>
+      <div id = 'previewimage'>
       <img src="http://s3-media2.fl.yelpcdn.com/bphoto/nhYd4yvhHJblevApb7-gnQ/o.jpg" alt="Smiley face">
+           <figcaption>
+        A stroll through downtown's famed Chinatown would be incomplete without a visit to the colorful, massive Mahayana Buddhist Temple, seated at the foot of the Manhattan Bridge. Within this faux pagoda (guarded by gilded lions) lies a large urn full of burning incense; for a dollar donation, you can get your very own rolled, rubber-banded fortune. Deeper in the building is what is believed to be the largest Buddha in the city: a behemoth, 16-foot gold statue resting on a lotus flower and sporting an ethereal blue halo around its head. 
+        </caption>
       </div>
-    <!--   <div id = 'previewtext'>
-        A stroll through downtown's famed Chinatown would be incomplete without a visit to the colorful, massive Mahayana Buddhist Temple, seated at the foot of the Manhattan Bridge. Within this faux pagoda (guarded by gilded lions) lies a large urn full of burning incense; for a dollar donation, you can get your very own rolled, rubber-banded fortune. Deeper in the building is what is believed to be the largest Buddha in the city: a behemoth, 16-foot gold statue resting on a lotus flower and sporting an ethereal blue halo around its head.
-      </div> -->
-    </div>
   </div>
 </div>
 </div>
