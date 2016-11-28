@@ -14,6 +14,11 @@
   }
 }
 
+select {
+    /* only works in webkit-compatible browsers */
+    -webkit-appearance: menulist-button;
+}
+
 // .col-md-6 > * {
 //   float: left;
 // }

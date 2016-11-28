@@ -4,13 +4,15 @@
   }
 
 img {
-  height: 50px; }
+  height: 218px;
+  display: inline;}
 
 .row {
   display: block; }
 
 .col-md-6 {
-  display: inline-block; }
+  display: inline-block;
+  width: 100%;}
   .col-md-6 select {
     float: left; }
 
@@ -19,11 +21,19 @@ img {
 	width: 100%;
 }
 
+select {
+    /* only works in webkit-compatible browsers */
+    -webkit-appearance: menulist-button;
+    /*padding: 10px;*/
+    margin: 5px;
+    width: 80%;
+}
+
 /*navigation bar stuff*/
 
-.navbar-xs { 
-	width: 100%; 
-} 
+.navbar-xs {
+	width: 100%;
+}
 
 .navbar {
 	width: 100%;
@@ -37,23 +47,64 @@ img {
 .nav_span {
 	margin-left: 5px;
 }
-.navbar-xs .navbar-brand{ 
+.navbar-xs .navbar-brand{
 	padding: 16px 10px 8px;
 	font-size: 30px;
-	line-height: 14px; 
-} 
+	line-height: 14px;
+}
 
-.navbar-xs .navbar-nav > li > a { 
-	border-right:1px 
-	solid #ddd; 
-	padding-top: 2px; 
-	padding-bottom: 2px; 
+.navbar-xs .navbar-nav > li > a {
+	border-right:1px
+	solid #ddd;
+	padding-top: 2px;
+	padding-bottom: 2px;
 	}
 
-	
+
 @media (min-width: 768px) {
 .navbar-nav {
 	float: right;
 	margin-top:10px;
 		}
+}
+
+/*this stuff is for the colummns*/
+.btn-circle {
+  height: 15px;
+  width: 15px;
+  border-radius: 60%;
+  text-align: center;
+  padding: 4px 0;
+  font-size: 12px;
+  line-height: 42%;
+  background: #eaf4ff;
+  border-color: transparent;
+}
+
+.panel-body {
+  display: inline-block;
+  height: 100%;
+  background: #ffffff;
+}
+.panel{
+  margin: 0px;
+  height: 250px;
+}
+
+#selection{
+  /*width: 75%;*/
+}
+
+#preview{
+  height: 100%;
+  /*width: 24%;*/
+  vertical-align: text-top;
+}
+
+#previewtext{
+  display: inline;
+}
+
+#app {
+  background: #8bd5f3;
 }

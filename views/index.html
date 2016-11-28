@@ -12,41 +12,49 @@
     </div>
   </div>
 </div>
-
-  <div class = "row">
-    <div id = "dropdown-container" class = "col-sm-6">
+<div class = 'row'>
+<div id = 'selection' class="panel panel-default col-sm-12 col-lg-8">
+  <div class="panel-body">
+    <div id = "dropdown-container">
+    <h4>Hotels</h4>
       <select name="hotels">
-
         {% for hotel in hotels %}
           <option>{{ hotel.name }}</option>
         {% endfor %}
-
       </select>
-
+      <button class = btn-circle>+</button>
+    <h4>Restaurants</h4>
       <select name = "restaurants">
-
          {% for restaurant in restaurants %}
           <option>{{ restaurant.name }}</option>
         {% endfor %}
-
       </select>
-
+      <button class = btn-circle>+</button>
+    <h4>Activities</h4>
       <select name = "activities">
-
          {% for activitie in activities %}
           <option>{{ activitie.name }}</option>
         {% endfor %}
-
-      </select>
+      </select><button class = btn-circle>+</button>
     </div>
-
-    <div id = "infoContainer" class = "col-sm-6">
-      <img src="http://sallysbakingaddiction.com/wp-content/uploads/2013/03/Easy-Homemade-Funfetti-Cake.-Get-the-recipe-at-sallysbakingaddiction.com-2.jpg" alt="Smiley face">
-    </div>
-
   </div>
-
 </div>
+
+<div id = "preview" class="panel panel-default col-sm-12 col-lg-4">
+  <div class="panel-body">
+    <div id = "infoContainer">
+      <div id = 'preview image'>
+      <img src="http://s3-media2.fl.yelpcdn.com/bphoto/nhYd4yvhHJblevApb7-gnQ/o.jpg" alt="Smiley face">
+      </div>
+    <!--   <div id = 'previewtext'>
+        A stroll through downtown's famed Chinatown would be incomplete without a visit to the colorful, massive Mahayana Buddhist Temple, seated at the foot of the Manhattan Bridge. Within this faux pagoda (guarded by gilded lions) lies a large urn full of burning incense; for a dollar donation, you can get your very own rolled, rubber-banded fortune. Deeper in the building is what is believed to be the largest Buddha in the city: a behemoth, 16-foot gold statue resting on a lotus flower and sporting an ethereal blue halo around its head.
+      </div> -->
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
 
 <script>
   var hotels = {{ hotels | dump | safe }};
